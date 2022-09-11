@@ -1,6 +1,6 @@
 ---
 page: true
-title: Meta - 推拉流管理器
+title: Meta
 ---
 
 <script setup>

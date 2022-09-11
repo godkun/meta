@@ -27,7 +27,7 @@ export default defineConfigWithTheme<ThemeConfig>({
 
   lang: 'en-zh',
   title: 'Meta',
-  description: 'Meta - 推拉流管理器',
+  description: 'Meta - Meta',
   srcDir: 'src',
   scrollOffset: 'header',
   lastUpdated: true,
@@ -53,7 +53,7 @@ export default defineConfigWithTheme<ThemeConfig>({
       'meta',
       {
         name: 'description',
-        content: '推拉流管理器'
+        content: 'Meta'
       }
     ]
   ],
