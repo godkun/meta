@@ -1,0 +1,43 @@
+{
+  "name": "meta",
+  "workspace": [
+    "meta-website",
+    "@meta/shared",
+    "@meta/theme",
+    "@meta/ui"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "deploy:meta": "turbo run build --scope=meta-website --includeDependencies --no-deps",
+    "format": "prettier --write ."
+  },
+  "turbo": {
+    "pipeline": {
+      "dev": {
+        "cache": false
+      },
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "./apps/meta-website/.vitepress/dist/**"
+        ]
+      }
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,json,vue,md}": [
+      "prettier --config .prettierrc.json --write"
+    ]
+  },
+  "devDependencies": {
+    "@vercel/node": "^1.14.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.8",
+    "pnpm": "^6.32.6",
+    "prettier": "^2.6.2",
+    "turbo": "^1.2.2"
+  }
+}
